@@ -47,6 +47,33 @@ exports.thrift = {
 ```js
 // {app_root}/config/config.default.js
 exports.thrift = {
+  type: thriftType,
+  connectType: 'http',
+  defaultClient: {
+    transport,
+    protocol,
+
+  },
+  clients: {
+    'test.myTest': {
+      client: 'test.myTestClient',
+      host: 'localhost',
+      port: '7001',
+      options: {
+        path: '/thrift/test',
+      },
+    },
+  }
+  defaultService: {
+    transport,
+    protocol,
+  },
+  services: {
+    '/thrift/test': {
+      processor: thriftType.test.myTestServer,
+      handler: 'service.test',
+    },
+  },
 };
 ```
 
