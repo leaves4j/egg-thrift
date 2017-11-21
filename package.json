@@ -1,6 +1,6 @@
 {
   "name": "egg-thrift",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "thrift plugin for egg",
   "eggPlugin": {
     "name": "thrift"
@@ -44,11 +44,11 @@
     "postversion": "git push && git push --tags"
   },
   "files": [
-    "app.js",
-    "agent.js",
-    "config",
+    "app",
     "lib",
-    "app"
+    "config",
+    "agent.js",
+    "app.js"
   ],
   "ci": {
     "version": "6, 8"
