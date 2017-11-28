@@ -6,8 +6,8 @@ module.exports = (options, app) => {
   if (!defaultService || !services) return;
   const serviceMap = new Map();
   Object.keys(services).forEach(uri => {
-    const serviceConifg = Object.assign({}, defaultService, services[uri]);
-    serviceMap.set(uri, serviceConifg);
+    const serviceConfig = Object.assign({}, defaultService, services[uri]);
+    serviceMap.set(uri, serviceConfig);
   });
 
   return createHttpServerHandler(serviceMap);

@@ -13,8 +13,10 @@
   "dependencies": {
     "lodash.camelcase": "^4.3.0",
     "lodash.get": "^4.4.2",
-    "lodash.set": "^4.3.2",
-    "thrift": "^0.10.0"
+    "lodash.set": "^4.3.2"
+  },
+  "peerDependencies": {
+    "n-thrift": "^0.1.2"
   },
   "devDependencies": {
     "autod": "^2.8.0",
@@ -26,7 +28,8 @@
     "eslint": "^3.19.0",
     "eslint-config-egg": "^4.2.0",
     "supertest": "^3.0.0",
-    "webstorm-disable-index": "^1.2.0"
+    "webstorm-disable-index": "^1.2.0",
+    "n-thrift": "^0.1.2"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -39,7 +42,6 @@
     "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
     "pkgfiles": "egg-bin pkgfiles",
     "autod": "autod",
-    "preversion": "npm test",
     "version": "git add -A",
     "postversion": "git push && git push --tags"
   },
