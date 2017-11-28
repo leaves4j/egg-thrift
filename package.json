@@ -1,6 +1,6 @@
 {
   "name": "egg-thrift",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "thrift plugin for egg",
   "eggPlugin": {
     "name": "thrift"
