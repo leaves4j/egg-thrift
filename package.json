@@ -59,7 +59,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-thrift.git"
+    "url": "git+https://github.com/leaves4j/egg-thrift.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
