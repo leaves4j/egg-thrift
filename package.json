@@ -6,9 +6,9 @@
     "name": "thrift"
   },
   "keywords": [
+    "egg-thrift",
     "egg",
     "thrift",
-    "egg-thrift",
     "eggPlugin",
     "egg-plugin"
   ],
@@ -17,9 +17,7 @@
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2"
   },
-  "peerDependencies": {
-    "n-thrift": "^0.1.2"
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "autod": "^2.8.0",
     "autod-egg": "^1.0.0",
@@ -29,9 +27,9 @@
     "egg-mock": "^3.7.0",
     "eslint": "^3.19.0",
     "eslint-config-egg": "^4.2.0",
+    "n-thrift": "^0.4.2",
     "supertest": "^3.0.0",
-    "webstorm-disable-index": "^1.2.0",
-    "n-thrift": "^0.1.2"
+    "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
     "node": ">=6.0.0"
