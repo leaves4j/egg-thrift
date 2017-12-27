@@ -19,9 +19,10 @@
   },
   "peerDependencies": {},
   "devDependencies": {
+    "@types/thrift": "^0.10.5",
     "autod": "^2.8.0",
     "autod-egg": "^1.0.0",
-    "egg": "^1.4.0",
+    "egg": "^2.0.0",
     "egg-bin": "^3.4.0",
     "egg-ci": "^1.6.0",
     "egg-mock": "^3.7.0",
