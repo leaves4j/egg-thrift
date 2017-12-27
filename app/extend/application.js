@@ -2,8 +2,10 @@
 
 const createThriftType = require('../../lib/create_thrift_type');
 const ClientManager = require('../../lib/client/client_manager');
+const ServiceManager = require('../../lib/server/service_manager');
 const THRIFT_TYPE = Symbol('Context#thriftType');
 const THRIFT_CLIENT_MANAGER = Symbol('Context#thriftClientManager');
+const THRIFT_SERVICE_MANAGER = Symbol('Context#thriftServiceManager');
 
 module.exports = {
   get thriftType() {
@@ -19,4 +21,12 @@ module.exports = {
     }
     return this[THRIFT_CLIENT_MANAGER];
   },
+
+  get thriftServiceManager() {
+    if (!this[THRIFT_SERVICE_MANAGER]) {
+      this[THRIFT_SERVICE_MANAGER] = new ServiceManager(this);
+    }
+    return this[THRIFT_SERVICE_MANAGER];
+  },
+
 };
