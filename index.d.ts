@@ -1,20 +1,15 @@
 import { EggApplication } from 'egg';
-import { TTransport, TProtocol } from 'thrift';
+import { TTransport, TProtocol,ConnectOptions } from 'thrift';
 
 export interface ClientConfig {
   client: string;
   alias?: string;
   multiplexed?: boolean;
   serviceName?: string;
-  transport: TTransport;
-  protocol: TProtocol;
-  connectType: 'http' | 'https' | 'tcp' | 'tls';
+  connectType: 'http' | 'tcp';
+  options: ConnectOptions;
   host: string;
-  path?: string;
   port?: string;
-  headers?: {
-    [name: string]: number | string | string[] | undefined;
-  };
 }
 
 export interface ServiceConfig {
@@ -22,15 +17,17 @@ export interface ServiceConfig {
   processor: string;
   multiplexed?: boolean;
   serviceName?: string;
-  transport: TTransport;
-  protocol: TProtocol;
-  connectType: 'http' | 'https' | 'tcp' | 'tls';
-  host: string;
-  path?: string;
+  connectType: 'http' | 'tcp';
   port?: string;
-  headers?: {
-    [name: string]: number | string | string[] | undefined;
-  };
+  options: {
+    transport: TTransport;
+    protocol: TProtocol;
+    path?: string;
+    headers?: {
+      [name: string]: number | string | string[] | undefined;
+    };
+    tls: any;
+  }
 }
 
 export interface ThriftConfig {
