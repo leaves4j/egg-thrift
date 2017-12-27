@@ -17,25 +17,35 @@ exports.thrift = {
   defaultClientConfig: {
     multiplexed: false,
     serviceName: '',
-    transport: TBufferedTransport,
-    protocol: TBinaryProtocol,
     connectType: 'tcp',
     host: '127.0.0.1',
-    path: '', // only works when connection type is http
     port: '80',
-    headers: {
+    options: {
+      transport: TBufferedTransport,
+      protocol: TBinaryProtocol,
+      path: '',
+      ssl: false,
+      https: false,
+      max_attempts: 3,
+      retry_max_delay: 300,
+      connect_timeout: 5000,
+      timeout: 5000,
+      nodeOptions: {},
+      headers: {},
     },
   },
   defaultServiceConfig: {
     multiplexed: false,
     serviceName: '',
-    transport: TBufferedTransport,
-    protocol: TBinaryProtocol,
     connectType: 'tcp',
     host: '127.0.0.1',
-    path: '',  // only works when connection type is http
     port: '80',
-    headers: {
+    options: {
+      transport: TBufferedTransport,
+      protocol: TBinaryProtocol,
+      path: '',
+      headers: {},
+      tls: {},
     },
   },
   clients: [
