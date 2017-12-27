@@ -94,10 +94,10 @@ Please open an issue [here](https://github.com/eggjs/egg/issues).
 ## TODO
 
 - [ ] compiler
-- [x] `app.thriftType`
+- [x] thriftType
 - [x] http server
 - [x] http client
-- [ ] compiler test
-- [ ] `app.thriftType` test
-- [ ] http server test
-- [ ] http client test
+- [ ] tcp server
+- [x] tcp client
+- [ ] test
+
