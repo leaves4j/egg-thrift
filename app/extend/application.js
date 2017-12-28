@@ -1,17 +1,16 @@
 'use strict';
 
+const { THRIFT_TYPE, THRIFT_CLIENT_MANAGER, THRIFT_SERVICE_MANAGER } = require('../../lib/types');
 const createThriftType = require('../../lib/create_thrift_type');
 const ClientManager = require('../../lib/client/client_manager');
 const ServiceManager = require('../../lib/server/service_manager');
-const THRIFT_TYPE = Symbol('Context#thriftType');
-const THRIFT_CLIENT_MANAGER = Symbol('Context#thriftClientManager');
-const THRIFT_SERVICE_MANAGER = Symbol('Context#thriftServiceManager');
 
 module.exports = {
   get thriftType() {
     if (!this[THRIFT_TYPE]) {
       this[THRIFT_TYPE] = createThriftType(this);
     }
+
     return this[THRIFT_TYPE];
   },
 
