@@ -6,4 +6,6 @@ coverage/
 run/
 .DS_Store
 *.swp
+app/thrift
+test/fixtures/apps/thrift-test/app/thrift
 package-lock.json
