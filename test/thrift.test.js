@@ -20,7 +20,8 @@ describe('test/thrift.test.js', () => {
   });
 
   it('should GET /', async () => {
-    await app.httpRequest()
+    await app
+      .httpRequest()
       .post('/test')
       .expect(200);
     // const conn = createHttpConnection('localhost', 7000, {
@@ -38,5 +39,4 @@ describe('test/thrift.test.js', () => {
     // const result = await client.hello();
     // assert(result === 'hello');
   });
-
 });
