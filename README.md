@@ -140,6 +140,7 @@ Please open an issue [here](https://github.com/eggjs/egg/issues).
 ## TODO
 
 - [x] compiler
+- [x] watcher
 - [x] thriftType
 - [x] http server
 - [x] http client
