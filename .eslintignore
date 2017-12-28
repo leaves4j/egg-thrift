@@ -1,1 +1,3 @@
 coverage
+app/thrift
+test/fixtures/apps/thrift-test/app/thrift
